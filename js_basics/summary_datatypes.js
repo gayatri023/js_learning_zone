@@ -59,3 +59,32 @@ eg. const score = 100
 
 
 */
+
+/*----------------------------------------stack & heap memory -----------------------------------------*/
+
+/*
+memory are of two types 
+1. stack - used in primitive type
+2. heap - used in non-primitive type - value not changed here it directly refer to the main data
+
+
+*/ 
+let myWord = "Ambitious" 
+let anotherWord = myWord
+
+anotherWord = "Passion"
+
+console.log(anotherWord);
+console.log(myWord);
+
+let user = {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+
+let user2 = user
+
+user2.email = "user2@email.com "
+
+console.log(user.email);
+console.log(user2.email);
