@@ -75,7 +75,7 @@ let anotherWord = myWord
 anotherWord = "Passion"
 
 console.log(anotherWord);
-console.log(myWord);
+console.log(myWord);         
 
 let user = {
     email: "user@google.com",
