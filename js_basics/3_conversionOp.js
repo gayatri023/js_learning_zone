@@ -33,4 +33,6 @@ console.log(boolIsLoggedIn_1)                     // False
 
 let isLoggedIn_2 = "Nikki"
 let booleanIsLoggedIn_2 = boolean(isLoggedIn_2)
-console.log(boolIsLoggedIn_2)                     //False
+console.log(boolIsLoggedIn_2)                      //False
+
+                 
