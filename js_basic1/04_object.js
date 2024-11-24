@@ -84,3 +84,48 @@ console.log(object.entries(tinderUser));   // show all the value (+nt) in with k
 
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));
 
+// let us study object destructuring
+
+const course = {
+    courseName : "developer",
+    Price : "999",
+    courseInstructor : "Miss X"
+}
+course.courseInstructor // one way of accessng data
+const {courseInstructor} = course  // it is more like synatactic sugar and after writing this we must not need to write each time course.courseInstructor this specification of object isnot necesarry only after this
+
+console.log(courseInstructor);
+
+// like as we can see courseInstructor is very big name so when we have  to write it multiple times it may get hard so we can change that to -----> how?  ------>let's take an example of coursePrice
+const {coursePrice : price} = course
+console.log(price);
+
+// not related to javascript but react
+const navbar = (/* props.company */) => {
+
+}
+navbar(company = "Nikki") 
+
+// in react when we have to write this we do something like we did in java - just add curly braces in parenthesis
+// they don't write props.company or props.this or props.that or anything  
+/*
+const navbar = ({comapny}) => {
+    
+    }
+navbar(company = Nikki)
+*/
+
+// api --> so when we want any other thing to work on our behalf we use api - for examle we don''t check 
+//whether the individual surfing the web has verofoccation of google id  etc - google verigfy that for us - 
+//simple api do those things - they are nothing but back end data which earlier be written in xml 
+//but now in json - javascript object notation- which is kind of object {}
+
+/*
+this is the way json written but remember that -> here keys are also treated like string
+
+{
+    "name" : "Nikki",
+    "courseName": "code",
+    "price": "free"
+}
+    */
