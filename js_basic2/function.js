@@ -43,3 +43,42 @@ console.log(result2);
 
 console.log(loginUserMessage());
 
+//------------------------------------------------------------------------------------------------------
+//there could be chance that user obt for 200 item then 400 item and then 500 iten but how could we pass 
+// all this parameter from one ---> so for that we use rest operator used by symbol => ... also this called 
+//spread 
+function calculatedCartPrice (...num1 ){   
+    return num1
+}
+console.log(calculatedCartPrice(200,400,500)); //output will be array from all the cart user put in it 
+// many time people use 
+// fn calaculatedCartPrice(val1, val2, ...num1)
+// what will happen now when we call the fn with value like 300, 400, 500, 600 then val1 get 200, val2 
+// get 400 and now in array what we will be shown is [500,600]
+
+
+const user = {
+    uername: "nikki",
+    price: 199
+}
+
+//beware of typesafety for passing any parameter --- in professional setting we can check through if else
+function handleObject(anyoobject){
+    console.log(`Username is ${anyoobject.username} and price is ${anyoobject.price}`);   
+}
+
+handleObject(user)
+// can also do calling of fn like this
+handleObject({
+    username : "nikki",
+    price: 399
+})
+
+const myNewArray = [200,400,100,600]
+
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+
+console.log(returnSecondValue(myNewArray));
+console.log(returnSecondValue([200, 400, 1000, 500])); // can write this way too
