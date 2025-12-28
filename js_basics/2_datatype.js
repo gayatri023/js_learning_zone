@@ -1,25 +1,58 @@
-"use strict"; // treat all js code as newer version
+"use strict"; 
+// Treats all JavaScript code as a newer (modern) version.
+// Helps catch common mistakes and enforces better coding practices.
 
-// alert("hello, world !")  // can't use as we are using node js and not browser
+// alert("Hello, world!");
+// This does not work in Node.js because `alert` is a browser feature.
 
-console.log("nikki")
+console.log("nikki");
 
-let name = " Ankii" 
-let age = 35     // number => 2 power 53  (range) 
-let isLoggedIn = false
+// Variable declarations
+let name = "Ankii";
+let age = 35;          // number → range: -(2^53 - 1) to (2^53 - 1)
+let isLoggedIn = false;
 
 /*
-bigint - used mostly in large number like stock market or big websites like reddit and facebook 
-string => "  "
-boolean => true/false
-null => standout alone
-undefined
-symbol => when create many component - to define uniqueness - we use symbol
+===========================================
+DATA TYPES IN JAVASCRIPT
+----------------------------------------------------------------------
 
-oject - cover in detailed
+Primitive Data Types:
+
+1) number
+   - Used for integers and decimals
+   - Safe range is up to 2^53 - 1
+
+2) bigint
+   - Used for very large numbers
+   - Common in finance, stock markets, and large-scale applications
+
+3) string
+   - Written inside single (' ') or double (" ") quotes
+
+4) boolean
+   - true or false
+
+5) null
+   - Represents an intentional empty value
+   - It is NOT zero and NOT undefined
+
+6) undefined
+   - A variable that is declared but not assigned any value
+
+7) symbol
+   - Used to create unique identifiers
+   - Helpful when building complex components or objects
+
+Non-Primitive Data Type:
+
+8) object
+   - Used to store collections of data
+   - Covered in detail later
+--------------------------------------------------------------------------------
 */
 
-console.log(typeof age);
-console.log(typeof null);    // output is object
-console.log(typeof undefined); //output is undefined
-
+// Type checking
+console.log(typeof age);        // number
+console.log(typeof null);       // object (this is a known JavaScript bug)
+console.log(typeof undefined);  // undefined
