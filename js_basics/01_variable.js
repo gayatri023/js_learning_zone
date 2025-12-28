@@ -27,21 +27,23 @@ WHY `let` IS PREFERRED OVER `var`
 - This means variables declared with `var` inside blocks
   like if, for, or while are still accessible outside the block.
 - This behavior can cause unexpected bugs in large programs.
+*/
 
-Example:
+// Example:
 
 if (true) {
   var x = 10;
 }
-console.log(x); // 10 ❌ (should not be accessible)
+console.log(x); // 10  (should not be accessible)
 
-With `let`:
+// With `let`:
 
 if (true) {
   let y = 10;
 }
-console.log(y); // ❌ Error (correct behavior)
+console.log(y); //  Error (correct behavior)
 
+/*
 -------------------------------------------
 2) HOISTING ISSUE WITH `var`
 
@@ -49,18 +51,20 @@ console.log(y); // ❌ Error (correct behavior)
   of their scope and initialized with `undefined`.
 - This allows variables to be used before declaration,
   which can hide bugs.
+*/
 
-Example:
+//Example:
 
-console.log(a); // undefined ❌
+console.log(a); // undefined 
 var a = 5;
 
-Internally JavaScript treats it as:
+// Internally JavaScript treats it as:
 
 var a;
 console.log(a);
 a = 5;
 
+/* 
 - `let` and `const` are also hoisted,
   but they are NOT initialized.
 - Accessing them before declaration causes an error,
@@ -71,11 +75,14 @@ a = 5;
 
 - `var` allows redeclaring the same variable
   in the same scope without errors.
+*/
 
-Example:
+// Example:
 
 var name = "Nikki";
-var name = "Gitu"; // ❌ No error (dangerous)
+var name = "Gitu"; //  No error (dangerous)
+
+/*
 
 - `let` does NOT allow redeclaration in the same scope.
 
@@ -90,7 +97,7 @@ CONCLUSION
 BEST PRACTICE:
 ✔ Use `const` by default
 ✔ Use `let` when reassignment is needed
-❌ Avoid `var`
+NOT RECOMMENDED Avoid `var`
 ===========================================
 */
 
@@ -106,7 +113,7 @@ accountCity = "Jaipur";
 let accountState;
 
 // accountId = 2; 
-// ❌ This is not allowed because `accountId` is declared as `const`.
+// WRONG - This is not allowed because `accountId` is declared as `const`.
 
 // Updating variable values
 accountEmail = "gitu43@gmail.com";
