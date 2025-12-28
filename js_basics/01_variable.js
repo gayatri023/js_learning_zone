@@ -1,24 +1,44 @@
-// variable in js can be described in two ways - constant and varying variables 
-// for constant there is only one way of using key words like "const"
+// Variables in JavaScript can be declared in different ways:
+// 1. Constant variables
+// 2. Variables whose values can change
 
-/* for varying variable we can use -let or var -= not prefer using var becuase of 
-block scope and functional scope------and please don't use as not recommended or preferred.
- var can not be used because early js has scope problem - so let does not provide */
+// Constant variables are declared using the keyword `const`.
+// Once assigned, their value cannot be changed.
 
 const accountId = 144332;
+
+// For variables whose values can change, we use `let` or `var`.
+// `let` is preferred over `var` because `var` has issues with
+// function scope and block scope in older JavaScript.
+// Therefore, using `var` is not recommended in modern JavaScript.
+
 let accountEmail = "Nikki45@gmail.com";
-var accountPassword = "12345";
-accountCity = "Jaipur"; // can reserve variable but this is not good but can be declared this way too
-let accountState; // will take is as undefined
+var accountPassword = "12345"; // Not recommended, shown only for learning
 
-// accountId = 2;  can't change accountId as we declared it const which means to remain constant - 
-// kind of type error
+// Variables can also be declared without a keyword,
+// but this is considered bad practice and should be avoided.
+accountCity = "Jaipur";
 
+// If a variable is declared but not assigned a value,
+// its value will be `undefined`.
+let accountState;
+
+// accountId = 2; 
+// ❌ This is not allowed because `accountId` is declared as `const`.
+
+// Updating variable values
 accountEmail = "gitu43@gmail.com";
 accountPassword = "1456";
-accountCity = "Bengaluru"
+accountCity = "Bengaluru";
 
+// Output values
 console.log(accountCity);
 
-
-console.table([accountId,accountEmail,accountPassword,accountCity,accountState])
+// Display multiple values in a table format
+console.table([
+  accountId,
+  accountEmail,
+  accountPassword,
+  accountCity,
+  accountState
+]);
