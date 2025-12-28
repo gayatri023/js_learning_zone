@@ -3,7 +3,7 @@
 
 /* for varying variable we can use -let or var -= not prefer using var becuase of 
 block scope and functional scope------and please don't use as not recommended or preferred.
- var can not be used because ear;y js has scope problem - so let does not provide */
+ var can not be used because early js has scope problem - so let does not provide */
 
 const accountId = 144332;
 let accountEmail = "Nikki45@gmail.com";
