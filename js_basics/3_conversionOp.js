@@ -10,6 +10,8 @@ let valueNumber_1 = Number(score_1)
 console.log(typeof valueNumber_1);      // Number
 console.log(valueNumber_1);             // nan   - its important to check string to number as sometimes 
                                       //without being number it shows that the datatype is converted
+// "33" => 33
+// "33abc" => NaN
 
 let score_2 = null
 console.log(typeof score_2);           //object
@@ -35,4 +37,12 @@ let isLoggedIn_2 = "Nikki"
 let booleanIsLoggedIn_2 = boolean(isLoggedIn_2)
 console.log(boolIsLoggedIn_2)                      //False
 
-                 
+// 1 => trye; 0=> false
+// "" => false
+// "Nikki" => true
+
+let someNumber = 33
+
+let stringNumber = String(someNumber)             // number
+console.log(stringNumber);
+console.log(typeof stringNumber);                 // string
