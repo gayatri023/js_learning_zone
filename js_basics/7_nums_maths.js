@@ -40,7 +40,7 @@ console.log(Math.floor(Math.random()*10+1));
 const min = 10
 const max = 20
 
-Math.random() * (max - min + 1)        // to get random value higher than 10 we use this as the above method will move till 10 only
+Math.random() * (max - min + 1)        // to get random value higher than 10 we use this as the above method will move till 9 only
 console.log(Math.floor(Math.random() * (max - min + 1)) + min)
 
 
