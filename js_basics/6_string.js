@@ -7,7 +7,7 @@ console.log(name + repoCount + " Value");  // outdated style of writing code
 console.log(`Helo my name is ${name} and my repo count is ${repoCount}`);  
 
 // another way to write string
-const gameName = new String ('hiteshhc')  // it also invoking js object new 
+const gameName = new String ('hiteshhc')  // it also invoking js object new  - not array but rather key value pair 0 = h
 
 
 console.log(gameName[0]);    //way to access key
@@ -45,7 +45,7 @@ const url = " https://developer.com/code%80developers " // between code develope
 
 console.log(url.replace('%80', '-')); //to correct the url we can use replace
 
-console.log(url.includes('developer')); //to chec whether the requiredword is in the url or not
+console.log(url.includes('developer')); //to check whether the requiredword is in the url or not
 
 const gameName1 = new String ("hitesh-cp-level-3")
 
