@@ -22,7 +22,7 @@ console.log(all_new_heroes);
 
 const another_array = [1,2,3[4,5,6],7,[6,7[4,5]]]
 
-const real_another_array = another_array.flat(infinity) //what flat do is - Returns a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+const real_another_array = another_array.flat(Infinity) //what flat do is - Returns a new array with all sub-array elements concatenated into it recursively up to the specified depth.
 
 //mostly should give depth but can use infinity but prefer providing depth 
 
