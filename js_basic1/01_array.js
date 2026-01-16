@@ -17,8 +17,10 @@ console.log(myArray);
 
 myArray.pop // do one thing remove the last element present in the myArray
 
-myArray.unshift(9)
+myArray.unshift(9)        // add element in the first of array
 console.log(myArray);
+myArray.shift(5)        // add element in the last of array 
+console.log(myArray);     
 
 console.log(myArray.includes(9)); // result boolean 
 console.log(myArray.indexof(9)); // result indexed if not present in array then show -1
@@ -26,14 +28,14 @@ console.log(myArray.indexof(9)); // result indexed if not present in array then 
 const newArr = myArray.join()
 
 console.log(myArray);    // came in form of array
-console.log(newArr);     // came in direct as vales - thecreal change here is type - string
+console.log(newArr);     // came in direct as values - thecreal change here is type - string
 console.log(typeof newArr); 
 
-//slice and splice
 
+//slice and splice
 console.log("A ", myArray);   //a provide notion - lke the output would be like this - A   [2,3,6,8,5]
 
-const myN1 =myArrat.slice(1,3)    // will take elements from myArray only those whose index value is 1,2 only
+const myN1 = myArrat.slice(1,3)    // will take elements from myArray only those whose index value is 1,2 only
 console.log(myN1);
 
 console.log("B ", myArray);
