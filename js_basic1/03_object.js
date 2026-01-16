@@ -3,26 +3,6 @@
 // singleton - when we create through constructor we can make one of its own kind and literal can't make this
 // object.create - constructor method for creation
 
-// declaration of key in aobject - asked in interview
-const mysym = Symbol ("key1")
-// how to use symbol as a key of object - to use object as a key we must first declare it first
-
-
-// object literal creation
-const JsUser = {     
-    name : "nikki",                             // by default name is taken by machine as "name" but it can determine this by itself. So we don't define it like that
-    "full name": "Nikki Singh",
-    age : 18,
-    // we can't directly use symbol here as 
-    mysym : "key1",
-    // to use key in a object we have to write it in square bracket
-    [mysym] : "key1",
-    location : "Jaipur",
-    email: "nikki@gmail.com",
-    isLoggedIn: false,
-    lastLogInDays: ["Monday", "Saturday"]
-}
-
 /* in array we can access it as like - myArray = ["h", "i"]
 myArray[1] or myArray[0]
 
@@ -39,6 +19,27 @@ but this change when we talk about objects
 
 */
 
+// declaration of key in aobject - asked in interview
+const mysym = Symbol ("key1")
+// how to use symbol as a key of object - to use object as a key we must first declare it first
+
+// object literal creation
+const JsUser = {     
+    name : "nikki",                             // by default name is taken by machine as "name" but it can determine this by itself. So we don't define it like that
+    "full name": "Nikki Singh",
+    age : 18,
+    // we can't directly use symbol here as 
+    [3443mysym] : "key1",
+    // to use key in a object we have to write it in square bracket
+    [mysym] : "key1",
+    location : "Jaipur",
+    email: "nikki@gmail.com",
+    isLoggedIn: false,
+    lastLogInDays: ["Monday", "Saturday"]
+}
+
+
+
 console.log(JsUser.email);
 console.log(JsUser["email"]);
 //  we can't access this with . - console.log(JsUser."full name");  we have to use square bracket for accessing the object here.
@@ -47,7 +48,7 @@ console.log(JsUser.mysym); // if we see here the type then the type will not be 
 console.log(typeof JsUser.mysym);
 
 JsUser.email = "nikki@chatgpt.com"
-//Object.freeze(JsUser)
+//Object.freeze(JsUser) - no changes happen aftwe this
 JsUser.email = "nikki@microsoft.com"  // after using job freeze we can't change the value so the email will be reamin of chatgpt only -but if we did not then it will change into this
 
 console.log(JsUser);
