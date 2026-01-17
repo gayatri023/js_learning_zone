@@ -9,11 +9,11 @@ if(true){
 }
 
 
-console.log(a); // this will not print that a b is not defined as wedefined it inside the loop 
+console.log(a); // this will not print that a,b is not defined as wedefined it inside the loop 
 console.log(b);
 console.log(c); // this will be printed and that's the problem and we should not use it 
 // what if 3-4 developer working on a project and one declare var c in outside the loop and other put it 
-// inside the loop then somehow it will bevery difficult for the one who put value outside and early to 
+// inside the loop then somehow it will be very difficult for the one who put value outside and early to 
 // check that it is wrong and value has been changed more confusion will be there if it is a long code.
 
 var a = 300 // this will be printed as 300 only  and this is global scope and global variable
