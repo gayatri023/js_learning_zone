@@ -41,7 +41,7 @@ const result2 = loginUserMessage("Nikki")
 console.log(result2);                      
 // we can also display the message without variable declaring - like console.log(loginUserMessage("Nikki"))
 
-console.log(loginUserMessage());
+console.log(loginUserMessage());  // when there is no value pass then it become undefined
 
 //------------------------------------------------------------------------------------------------------
 //there could be chance that user obt for 200 item then 400 item and then 500 iten but how could we pass 
