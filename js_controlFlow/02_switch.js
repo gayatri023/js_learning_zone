@@ -27,7 +27,8 @@ switch (month){
 default:
     console.log("default case match");
     break;
-    
+
+        // see in js we once the case matches then all the remaining values are also executed with the match cases for say if we got month 3 then we will see march and april both in the console
         
         
         
