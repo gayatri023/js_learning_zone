@@ -1,4 +1,4 @@
-var c = 300
+ var c = 300
 const b =400
 // when this comes in --> {} in any function or loops, if else then at that timt this is called scope
 if(true){
@@ -7,7 +7,6 @@ if(true){
     var c = 30
     console.log("Inner: ", a );  // this is block-scope - local variable
 }
-
 
 console.log(a); // this will not print that a,b is not defined as wedefined it inside the loop 
 console.log(b);
