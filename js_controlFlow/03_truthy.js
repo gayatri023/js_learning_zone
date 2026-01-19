@@ -10,11 +10,10 @@ else{
 // empty string will provide don't have user email and empty array will show got your email
 // falsy values = false, 0, -0, BigInt 0n, "", null, undefined, Nan  - eqaulising these facor to each will provide true which is common sense
 
-// truthy value -"0", "false", " ", [], {}, funtion(){}
+// truthy value = "0", "false", " ", [], {}, funtion(){}
 
 if (userEmail.length === 0 ){
     console.log("array is empty");
-    
 }
 
 const emptyObj = {}
