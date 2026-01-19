@@ -1,21 +1,79 @@
-// immediately invoked function expression (IIFE)
+/*
+===========================================
+   Immediately Invoked Function Expression
+                 (IIFE)
+===========================================
 
-(function connect (){
-    console.log(`DB Connected`);                         // for immediately invoking fn can add parenthesis
-}) ();                                                  // but as it will show error we will put parenthesis
-// we will put parenthesis to both fn and invoking together  - as parenthesis will work as a block altogether
-// what happened is first parenthesis is fn call and second is execution call - ()() - why do this --
-/* we do this tp get rid of the pollution caused by global scope variable or declearation - w use iffe 
+An IIFE is a function that runs immediately after it is defined.
 
-now one more thing so as we invoke iife - it does not know where to stop so it will not move to another fn
-even if we try - so to invoke another fn or code we provide iffe to end the context by putting semi -colon at end*/
+WHY WE USE IIFE?
+1. To avoid polluting the global scope.
+2. To run code immediately (e.g., DB connection, app initialization, config setup).
 
-(function coffee() /*named iife*/{
-    console.log(`DB is Connected second time`);
-    
-} )();
+IMPORTANT:
+When using multiple IIFEs in the same file, always end the previous IIFE with a semicolon (;)
+so JavaScript knows where one function ends.
+===========================================
+*/
 
-((name)=> { // unnamed iife
+
+// ================================
+// 1. Named IIFE
+// ================================
+// This function runs immediately after being defined
+// Used here to simulate a database connection
+
+(function connectDB() {
+    console.log("DB Connected");
+})(); // <-- semicolon is important
+
+
+
+// ================================
+// 2. Another Named IIFE
+// ================================
+// Another example of IIFE executing immediately
+
+(function coffee() {
+    console.log("DB is connected second time");
+})(); // <-- semicolon is important
+
+
+
+// ================================
+// 3. Arrow Function IIFE (Unnamed)
+// ================================
+// This IIFE takes a parameter and executes immediately
+
+((name) => {
     console.log(`DB is connected third time ${name}`);
-    
-}) ("nikki");
+})("nikki");
+
+
+
+/*
+===========================================
+HOW IIFE WORKS:
+
+(function(){})()
+
+First ()  -> converts function into an expression
+Second () -> immediately executes the function
+
+So basically:
+define + execute = ()()
+
+===========================================
+
+BENEFITS:
+- Keeps variables private
+- Avoids global scope pollution
+- Perfect for one-time setup code
+
+USE CASES:
+- Database connection
+- App initialization
+- Config loading
+- Module setup
+===========================================
+*/
