@@ -30,7 +30,7 @@ console.log("Result", result1);
 
 // let's use if and else statement 
 function loginUserMessage (username){             //if want to set default value we write in parenthesis (username="Sam")
-    if(username === undefined){                           // if(!username)  -- can also wrote like this
+    if(username === undefined){                           // if(!username)  -- can also wrote like this especially in react etc
         console.log("please enter a username");
         return
     }
@@ -40,8 +40,8 @@ function loginUserMessage (username){             //if want to set default value
 const result2 = loginUserMessage("Nikki")
 console.log(result2);                      
 // we can also display the message without variable declaring - like console.log(loginUserMessage("Nikki"))
-
-console.log(loginUserMessage());  // when there is no value pass then it become undefined
+// when there is empty string - "" it will just say just logged in.
+console.log(loginUserMessage());  // when there is no value pass then it become undefined just logged in
 
 //------------------------------------------------------------------------------------------------------
 //there could be chance that user obt for 200 item then 400 item and then 500 iten but how could we pass 
@@ -63,8 +63,8 @@ const user = {
 }
 
 //beware of typesafety for passing any parameter --- in professional setting we can check through if else
-function handleObject(anyoobject){
-    console.log(`Username is ${anyoobject.username} and price is ${anyoobject.price}`);   
+function handleObject(anyObject){
+    console.log(`Username is ${anyObject.username} and price is ${anyObject.price}`);   
 }
 
 handleObject(user)
