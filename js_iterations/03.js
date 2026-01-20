@@ -22,14 +22,14 @@ map.set('IN', 'INDIA')
 map.set('USA', 'United States Of America')
 map.set('FR', 'France')
 
-console.log(map);
+console.log(map);        // key value pair willl be printed and that too only unique like - "IN" => "India"
 
 for (const key of map){
-    console.log(key);
+    console.log(key);        // print whole array like ["IN", "India"]
 }
 
 for (const [key, value] of map){
-    console.log(key, ':-', value);
+    console.log(key, ':-', value);  // this will desrture with the limiter :- like -- ["IN" :- : "India"]
 }
  
 const myObject  = {
@@ -41,6 +41,8 @@ const myObject  = {
 not iterable above approach for object
 for (const [key, value] of myObject){
     console.log(key,":-", value);
+
+    in this the object -- myObject is not iterable 
 }
 */
 
