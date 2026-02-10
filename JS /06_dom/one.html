@@ -12,8 +12,9 @@
     </style>
 </head>
 <body class="bg-black">
+
     <div >
-        <h1  id="title" class="heading">DOM learning on Chai aur code <span style="display: none;">test text</span></h1>
+        <h1  id="title" class="heading">DOM learning <span style="display: none;">test text</span></h1>
         <h2>Lorem ipsum dolor sit.</h2>
         <h2>Lorem ipsum dolor sit.</h2>
         <h2>Lorem ipsum dolor sit.</h2>
@@ -29,3 +30,97 @@
     </div>
 </body>
 </html>
+
+<!-- 
+can do this by --
+console.log(window)   
+
+console.log(window.document)    
+
+// DOM is a JS object, not HTML text — that’s the key mental shift.
+console.log(document) -- not provide full info only share about html - -- Shows the HTML view (what the browser renders)
+or
+console.dir(document)  -- Shows the JavaScript object view (properties & methods)
+
+to test - working on wikipedia page  - Brendan Eich
+document.getElementById('heading')
+document.getElementById('heading').textContent = "Here is the code"
+
+
+to manipulate above code file we can test them like -
+    document.getElementById("title").id
+    document.getElementById("title").class --- get undefined - class is a reserved keyword in JavaScript ---So DOM cannot expose it as class
+    document.getElementById("title").className -- we use class but bts when document is understanding it is taking it as className and same happened in react but there we take className only
+        What’s happening BTS:
+        HTML attribute → class
+        DOM property → className
+        JS uses camelCase, not HTML names
+        This is NOT auto-magic — it’s how DOM API was designed.
+
+    document.getElementById("title").getAttribute("id")
+    document.getElementById("title").getAttribute("class")
+        we use class instead of className as the the attribute vs property cause the difference
+        getAttribbute reads what written in HTML
+        getElementById reads the live JS value
+    document.getElementById("title").setAttribute("class", "test") --- undefined
+    document.getElementById("title").setAttribute("class", "test heading")  -- undefined
+    document.getElementById("title")
+    const title = document.getElementById("title")  -- undefined
+
+    title
+    title.style.backgroundColor = "green"
+    title.style.padding = "15px"
+    title.style.borderRadius = "5px"
+    title.style.borderRadius = "5px"
+
+    title
+    title.textContent
+    title.innerHtml
+    title.innerTe
+    title.innerText
+    title.textContent
+    title.innerHTMl
+
+    document.getElementsByClassName
+    document.querySelector("h1")
+    document.querySelector("h2")
+    document.querySelector("#title")
+    document.querySelector(".heading")
+    document.querySelector('input[type="password"]')  
+    document.querySelector('p.first-child') 
+    document.querySelector('ul')
+    const myul = document.querySelector('ul')
+    myul.querySelector('li')
+    const turnGreen = myul.querySelector('li')  -- undefined
+    turnGreen.style.background = "green"
+    turnGreen.style.padding = "10px"
+    turnGreen.innerText = "five"
+    document.querySelectorAll('li')   -- provide nodelist
+    const tempLiList = document.querySelectorAll('li')
+
+    tempLiList
+
+    const myArr = [1, 2, 3, 4]  -- undefined
+    myArr
+    tempLiList.style.color = 'green'
+    tempLiList[0].style.color = 'green'
+    tempLiList
+    const tempLiList = document.querySleectorAll('li')
+    const myH1 = document.querySelectorAll('h1')   --- undefined
+    myH1
+    myH1[0] .style.color = 'green'
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+-->
+
