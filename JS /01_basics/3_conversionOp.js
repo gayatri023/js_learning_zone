@@ -26,16 +26,16 @@ console.log(typeof valueNumber_3);     //number
 console.log(valueNumber_3)             //1
 
 let isLoggedIn = 1
-let booleanIsLoggedIn = boolean(isLoggedIn)
-console.log(booleanIsLoggedIn)                     // True
+let NooleanIsLoggedIn = boolean(isLoggedIn)
+console.log(BooleanIsLoggedIn)                     // True
 
 let isLoggedIn_1 = ""
-let booleanIsLoggedIn_1 = boolean(isLoggedIn_1)
-console.log(boolIsLoggedIn_1)                     // False
+let BooleanIsLoggedIn_1 = Boolean(isLoggedIn_1)
+console.log(BoolIsLoggedIn_1)                     // False
 
 let isLoggedIn_2 = "Nikki"
-let booleanIsLoggedIn_2 = boolean(isLoggedIn_2)
-console.log(boolIsLoggedIn_2)                      //False
+let BooleanIsLoggedIn_2 = Boolean(isLoggedIn_2)
+console.log(BoolIsLoggedIn_2)                      //False
 
 // 1 => trye; 0=> false
 // "" => false
@@ -48,7 +48,7 @@ console.log(stringNumber);
 console.log(typeof stringNumber);                 // string
 
 
-lst value = 3
+let value = 3
 let negValue = -value
 console.log(negValue);
 
@@ -74,7 +74,7 @@ num1 = num2 = num3 = 2+2;
 
 // post fix and pre fix -- incremental component
 let gameCounter = 100
-++gmaeCounter;
+++gameCounter;
 console.log(gameCounter);
 
 // link to study
