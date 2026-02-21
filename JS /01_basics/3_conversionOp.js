@@ -19,7 +19,7 @@ let valueNumber_2 = Number(score_2)
 console.log(typeof valueNumber_2);     //number
 console.log(valueNumber_2)             //0
 
-let score_3 = True
+let score_3 = true
 console.log(typeof score);             //boolean
 let valueNumber_3 = Number(score_3)
 console.log(typeof valueNumber_3);     //number
