@@ -3,7 +3,7 @@
 //creted date instance or object
 let myDate = new Date()
 console.log(myDate);                  //will provide date but with some gibberish for non user
-console.log(myDate.toString);         // make it little readable
+console.log(myDate.toString());         // make it little readable
 console.log(myDate.toDateString);         // provide day and date
 console.log(myDate.toLocaleDateString);         // provide date and time
 
