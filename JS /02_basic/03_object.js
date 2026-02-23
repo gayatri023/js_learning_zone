@@ -1,73 +1,107 @@
-// object can be declared in two ways - one literal and second is constructor
+//-----------------------------------------Object Creation------------------------------------------------
+// 1. Object literal (most common)
+const user = {
+  name: "Nikki",
+  age: 18
+};
 
-// singleton - when we create through constructor we can make one of its own kind and literal can't make this
-// object.create - constructor method for creation
+// 2. Constructor
+const user2 = new Object();
+user2.name = "Nikki";
 
-/* in array we can access it as like - myArray = ["h", "i"]
-myArray[1] or myArray[0]
+// 3. Object.create()
+const obj = Object.create(null);
 
-but this change when we talk about objects
- in array we are not allowed to show key and value but only through indexation
+//--------------Singleton----------------------
+// When using constructor or class, we can restrict object to only one instance.
+// This is called Singleton Pattern.
 
- but in object we access key and value too
+//---------Array vs Object Access---------------
+// Array -> index based
+const arr = ["h", "i"];
+console.log(arr[0]);
 
- and we do this through examples like -
- console.log(JsUser.email)  
- 
- - this is one way but we can also do this like below
- console.log(JsUser.[email])
+// Object -> key based
+const user3 = { name: "Nikki" };
+console.log(user3.name);
 
-*/
+//----------Access Object Properties-------------
+// Dot notation
+console.log(user3.name);
 
-// declaration of key in aobject - asked in interview
-const mysym = Symbol ("key1")
-// how to use symbol as a key of object - to use object as a key we must first declare it first
+// Bracket notation
+console.log(user3["name"]);
 
-// object literal creation
-const JsUser = {     
-    name : "nikki",                             // by default name is taken by machine as "name" but it can determine this by itself. So we don't define it like that
-    "full name": "Nikki Singh",
-    age : 18,
-    // we can't directly use symbol here as 
-    [3443mysym] : "key1",
-    // to use key in a object we have to write it in square bracket
-    [mysym] : "key1",
-    location : "Jaipur",
-    email: "nikki@gmail.com",
-    isLoggedIn: false,
-    lastLogInDays: ["Monday", "Saturday"]
-}
+//  Wrong
+// console.log(user3.["name"]);
 
+//--------Keys with Space-------------------------
+const user4 = {
+  "full name": "Nikki Singh"
+};
 
+// must use bracket notation
+console.log(user4["full name"]);
 
-console.log(JsUser.email);
-console.log(JsUser["email"]);
-//  we can't access this with . - console.log(JsUser."full name");  we have to use square bracket for accessing the object here.
-console.log(JsUser["full name"]);
-console.log(JsUser.mysym); // if we see here the type then the type will not be seen as symbol - shows str
-console.log(typeof JsUser.mysym);
+//---------Symbol as Object Key (Important)--------
+// Symbol -> unique key
+const mysym = Symbol("key1");
 
-JsUser.email = "nikki@chatgpt.com"
-//Object.freeze(JsUser) - no changes happen aftwe this
-JsUser.email = "nikki@microsoft.com"  // after using job freeze we can't change the value so the email will be reamin of chatgpt only -but if we did not then it will change into this
+const JsUser = {
+  name: "Nikki",
+  age: 18,
 
-console.log(JsUser);
+  // correct way
+  [mysym]: "secret"
+};
 
-//now add function in js  (fn is js treated as type 1 citizen - there is no diference between them)
+//--------Access Symbol-------------------------
+console.log(JsUser[mysym]);
+// wrong (checks string key)
+console.log(JsUser.mysym);
+
+//--------Update Object--------------------------
+JsUser.name = "Nikki Singh";
+
+//-------Freeze Object-----------------------------
+Object.freeze(JsUser);
+// after freeze -> no changes allowed
+JsUser.name = "Test"; // ignored
+
+//-----Add Functions (Methods)-----------------------
 JsUser.greeting = function () {
-    console.log("Hello JS User");
-}
-    
+  console.log("Hello JS User");
+};
 
-console.log(JsUser.greeting);  // if use fn like this it will show undefined this is coming because earlier we freeze the object JsUser - so to use this we have to comment down the freeze part
+//-------Reference vs Execution------------------------
+console.log(JsUser.greeting);   // function reference
+console.log(JsUser.greeting()); // execution
 
-// console.log(JsUser.greeting());  -- this will through type error:JsUser.greeting is not a function this is coming because earlier we freeze the object JsUser - so to use this we have to comment down the freeze part
+//-------this Keyword-----------------------------------
+JsUser.greeting2 = function () {
+  console.log(`Hello ${this.name}`);
+};
 
-console.log(JsUser.greeting()); //it will show greeting now
-console.log(JsUser.greeting);  // this will show [function (anonymous)]  - here fn is not execute it is just referenced 
+const mysym = Symbol("key1");
 
-JsUser.greeting1 = function () {
-    console.log(`Hello JS User, ${this.name}`);   // we can greet through name here
-}
+const JsUser = {
+  name: "Nikki",
+  "full name": "Nikki Singh",
+  age: 18,
+  [mysym]: "secret",
+  location: "Jaipur",
+  email: "nikki@gmail.com",
+  isLoggedIn: false,
+  lastLogInDays: ["Monday", "Saturday"]
+};
 
-console.log(JsUser.greeting1()); //it will show greeting now but with name
+JsUser.greeting = function () {
+  console.log("Hello JS User");
+};
+
+JsUser.greeting2 = function () {
+  console.log(`Hello ${this.name}`);
+};
+
+JsUser.greeting();
+JsUser.greeting2();
