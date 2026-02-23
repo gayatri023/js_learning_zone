@@ -50,8 +50,7 @@ const mysym = Symbol("key1");
 const JsUser = {
   name: "Nikki",
   age: 18,
-
-  // correct way
+  // correct way  not like mysym: "secret"
   [mysym]: "secret"
 };
 
@@ -73,7 +72,7 @@ JsUser.greeting = function () {
   console.log("Hello JS User");
 };
 
-//-------Reference vs Execution------------------------
+//-------fn Reference vs fn Execution------------------------
 console.log(JsUser.greeting);   // function reference
 console.log(JsUser.greeting()); // execution
 
