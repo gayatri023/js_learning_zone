@@ -20,15 +20,15 @@ const all_new_heroes = [...marvel_heroes, ... dc_heroes] // what happened is aft
 
 console.log(all_new_heroes);
 
-const another_array = [1,2,3[4,5,6],7,[6,7[4,5]]]
+const another_array = [1,2,3, [4,5,6],7,[6,7[4,5]]]
 
 const real_another_array = another_array.flat(Infinity) //what flat do is - Returns a new array with all sub-array elements concatenated into it recursively up to the specified depth.
 
 //mostly should give depth but can use infinity but prefer providing depth 
 
 console.log(Array.isArray("Hitesh"));
-console.log(Array.isfrom("Hitesh"));     // this convert hitesh into an array - ["H", "i", "t", "e","s","h" ]
-console.log(Array.isfrom({name: "hitesh"})); // **** interesting to know ---here we will get an empty array as it is not able to directly convert {name: "hitesh"} into an array aswe have to tell whether to create array of keys or values
+console.log(Array.from("Hitesh"));     // this convert hitesh into an array - ["H", "i", "t", "e","s","h" ]
+console.log(Array.from({name: "hitesh"})); // **** interesting to know ---here we will get an empty array as it is not able to directly convert {name: "hitesh"} into an array aswe have to tell whether to create array of keys or values
 
 let score1 = 100
 let score2 = 200
