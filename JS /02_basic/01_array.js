@@ -1,5 +1,5 @@
-// js array - resizable , cannot access using aritary string as index (eg:one), zero indexed
-
+// js array - resizable , cannot access using aritary string as index (eg:one) - more like we can use them but they are treated as normal object properties 
+// and not like real array indexes, zero indexed
 
 const array = [0,1,2,3,4,5]  // not necessay to have same element it could ahve different element
 console.log(array[9]);
