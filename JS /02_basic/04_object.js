@@ -101,11 +101,11 @@ console.log(courseInstructor);
 const {coursePrice : price} = course
 console.log(price);
 
-// not related to javascript but react
-const navbar = ({ company }) => {
+// javascript fn
+const navbar = (company) => {
     console.log(company);
 }
-navbar("Nikki") 
+navbar("Nikki")
 
 // in react when we have to write this we do something like we did in java - just add curly braces in parenthesis
 // they don't write props.company or props.this or props.that or anything  
@@ -126,18 +126,105 @@ const Navbar = ({ company }) => {
 */
 
 
+// ===============================
+// API and JSON – Beginner Notes
+// ===============================
 
-// api --> so when we want any other thing to work on our behalf we use api - for examle we don''t check 
-//whether the individual surfing the web has verofoccation of google id  etc - google verigfy that for us - 
-//simple api do those things - they are nothing but back end data which earlier be written in xml 
-//but now in json - javascript object notation- which is kind of object {}
 
-/*
-this is the way json written but remember that -> here keys are also treated like string
+//  What is an API?
+// API = Application Programming Interface
+// It is a way for different software or apps to communicate with each other.
 
-{
-    "name" : "Nikki",
-    "courseName": "code",
-    "price": "free"
-}
-    */
+
+//  Why do we use APIs?
+// Instead of building everything ourselves, we use existing services.
+// Example:
+// - Google Login
+// - Payment systems
+// - Weather data
+// - Maps
+
+// We send a request → API does the work → API sends response.
+
+
+//  Example: Google Login
+// When a user clicks "Login with Google":
+// 1. Our app sends a request to Google API.
+// 2. Google checks the user's account.
+// 3. Google sends back the result.
+// 4. Our app logs the user in.
+
+// So our app does not verify users. Google does.
+
+
+//  Real-life example
+// Think of a restaurant:
+// Frontend (React) = customer
+// Backend (server, database) = kitchen
+// API = waiter
+// The waiter takes your order and brings the food.
+
+
+//  Is API the same as data?
+// No.
+// API is the way to get the data, not the data itself.
+
+
+//  XML vs JSON
+// Earlier APIs used XML to send data.
+// Example:
+
+// <user>
+//   <name>Nikki</name>
+// </user>
+
+// But XML is long and complex.
+// Now most APIs use JSON.
+
+
+//  What is JSON?
+// JSON = JavaScript Object Notation
+// It is a format used to send and receive data.
+// It looks like a JavaScript object.
+
+
+// Example JSON:
+
+// {
+//   "name": "Nikki",
+//   "courseName": "code",
+//   "price": "free"
+// }
+
+
+//  Important JSON rules
+// 1. Keys must always be in double quotes.
+// 2. JSON is text, not actual JavaScript.
+// 3. JSON is easy to convert into JavaScript objects.
+
+
+//  Valid JSON:
+// {
+//   "name": "Nikki"
+// }
+
+//  Invalid JSON:
+// {
+//   name: "Nikki"
+// }
+// This is a JavaScript object, not JSON.
+
+
+//  Why JSON is popular?
+// - Easy to read
+// - Lightweight
+// - Fast
+// - Works well with JavaScript
+// - Used in most modern APIs.
+
+
+//  How React uses APIs
+// 1. React sends a request to an API.
+// 2. API returns JSON.
+// 3. React converts JSON into JavaScript object.
+// 4. React shows the data on the screen.
