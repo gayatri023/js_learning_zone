@@ -70,16 +70,17 @@ const user= [
 ]
 
 // so when we have to loop through it or print it what we do is
-users[1].email  //tellint to go to the user whose indexation is 1 and then to its email
+user[1].email  //tellint to go to the user whose indexation is 1 and then to its email
 console.log(users[1].email);
 
 console.log(tinderUser);
 
-console.log(object.keys(tinderUser));    // here we get this keys in array typeform
-console.log(object.values(tinderUser));    // here we get array in array typeform
-console.log(object.entries(tinderUser));   // show all the value (+nt) in with keys and values where first is key and values
+console.log(Object.keys(tinderUser));    // here we get this keys in array typeform
+console.log(Object.values(tinderUser));    // here we get array in array typeform
+console.log(Object.entries(tinderUser));   // show all the value (+nt) in with keys and values where first is key and values
 
-//sometimes there will be chance that we want to loop through all the data in object and then find the value but sometimes what happened is that there is chance that the value is not existed and if the value does not existed then there is chance of crash 
+//sometimes there will be chance that we want to loop through all the data in object and then find the value 
+//but sometimes what happened is that there is chance that the value is not existed and if the value does not existed then there is chance of crash 
 // so what we can do is to check manually or can ask directly
 
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));
