@@ -1,6 +1,6 @@
 // fn_keyword fn_Name(){           //() -->syntax
 //  }
-//  calling fn required --> fn_Name() --> if write onlu fn_Name there will bw no output as it will only reference
+//  calling fn required --> fn_Name() --> if write only fn_Name there will bw no output as it will only reference
 
 
 // value when put into fn called parameter
@@ -9,7 +9,7 @@ function add (num1, num2){
     console.log(num1 + num2);   
 }
 // value when written for recall are called arguement
-const addValue = add (3,4)  // if we pur 4 as "4" ->output = 34 , if took 4 as "a" -> output = 3a, if null instead of 4 = 3
+const addValue = add (3,4)  // if we put 4 as "4" ->output = 34 , if took 4 as "a" -> output = 3a, if null instead of 4 = 3
 
 console.log("Result ", addValue); // show undefined 
 
@@ -58,7 +58,7 @@ console.log(calculatedCartPrice(200,400,500)); //output will be array from all t
 
 
 const user = {
-    uername: "nikki",
+    username: "nikki",
     price: 199
 }
 
