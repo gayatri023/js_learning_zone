@@ -102,19 +102,30 @@ const {coursePrice : price} = course
 console.log(price);
 
 // not related to javascript but react
-const navbar = (/* props.company */) => {
-
+const navbar = ({ company }) => {
+    console.log(company);
 }
-navbar(company = "Nikki") 
+navbar("Nikki") 
 
 // in react when we have to write this we do something like we did in java - just add curly braces in parenthesis
 // they don't write props.company or props.this or props.that or anything  
 /*
-const navbar = ({comapny}) => {
-    
-    }
-navbar(company = Nikki)
+
+option one using props - 
+const Navbar = (props) => {
+  console.log(props.company);
+}
+<Navbar company="Nikki" />
+
+
+option 2 - 
+const Navbar = ({ company }) => {
+  console.log(company);
+};
+<Navbar company="Nikki" />
 */
+
+
 
 // api --> so when we want any other thing to work on our behalf we use api - for examle we don''t check 
 //whether the individual surfing the web has verofoccation of google id  etc - google verigfy that for us - 
