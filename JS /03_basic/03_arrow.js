@@ -5,7 +5,8 @@ const user = {
     price : 99,
 
     welcomeMessage : function(){
-        console.log(`${this.username} , welcome to website `);   // this is used to refer current context
+        console.log(`${this.username} , welcome to website `);  // function inside an object is called method of object 
+        // this is used to refer current context
         console.log(this);
         
     }
@@ -28,7 +29,7 @@ chai()
 /* 
 function chai(){
     let username ="Nikki"
-    console.log(this.username);         ===> 'this' can't be use inside a function it can provide value for object only
+    console.log(this.username);         ===> this can be used inside any function. It refers to the object that calls the function.
     }
 
 
@@ -43,7 +44,7 @@ function chai(){
 
 const chai = () => {
     let username ="Nikki"
-    console.log(this.username);  // if use this.username then it will show undefined and if use this it wil show {}         
+    console.log(this.username);  // if use this.username then it will show undefined and if use this it wil show {}  -----> Arrow functions do NOT have their own this. borrow this from the outside (parent scope).      
     }
 
 
