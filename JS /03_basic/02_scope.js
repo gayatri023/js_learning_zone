@@ -8,7 +8,7 @@ if(true){
     console.log("Inner: ", a );  // this is block-scope - local variable
 }
 
-console.log(a); // this will not print that a,b is not defined as wedefined it inside the loop 
+console.log(a); // this will not print that a is not defined as we defined it inside the loop only
 console.log(b);
 console.log(c); // this will be printed and that's the problem and we should not use it 
 // what if 3-4 developer working on a project and one declare var c in outside the loop and other put it 
