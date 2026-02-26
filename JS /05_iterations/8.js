@@ -1,5 +1,9 @@
 // reduce js 
+// reduce is used when you want to combine all values of an array into one single value.
 const myNums = [1, 2, 3]
+
+// acc - accumulator (stores result so far)
+// curr - current element
 
 // const myTotal = myNums.reduce(function (acc, currval) {
 //     console.log(`acc: ${acc} and currval: ${currval}`);
@@ -7,7 +11,6 @@ const myNums = [1, 2, 3]
 // }, 0)
 
 const myTotal = myNums.reduce( (acc, curr) => acc+curr, 0)
-
 console.log(myTotal);
 
 
