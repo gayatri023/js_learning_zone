@@ -5,7 +5,16 @@
 // forEach is used when you want to LOOP over an array
 // and DO something (print, update, push, etc)
 // forEach does NOT return anything
-
+/*
+forEach is used for side effects.
+Examples:
+Printing
+Logging
+Updating UI
+Modifying variables
+Making API calls
+It is not meant for creating new arrays.
+*/
 const coding = ["js", "ruby", "java", "python", "cpp"];
 
 coding.forEach((item) => {
@@ -18,11 +27,20 @@ console.log("Return value of forEach:", result);
 //  OUTPUT: undefined
 // Because forEach ALWAYS returns undefined
 
+// Inside forEach, return only exits that callback, not the loop. Example:
+
+coding.forEach(item => {
+  if(item === "java") return;
+  console.log(item);
+});
+//This skips only that iteration, but does not stop the loop.
+
+
 // -------------------- filter --------------------
 
 // filter is used when you want to SELECT some elements
 // based on a condition and get a NEW ARRAY
-//  filter ALWAYS returns a new array
+//  filter ALWAYS returns a new array - NOT modify the original array.
 
 const myNums = [1,2,3,4,5,6,7,8,9,10];
 
@@ -77,3 +95,20 @@ userBooks = books.filter((bk) => {
 });
 
 console.log("History books after 1995:", userBooks);
+
+
+
+/*
+1. Do something → forEach
+Example:
+  Print
+  Update UI
+  Modify external variable
+  Logging
+
+2. Get something → map, filter
+Example:
+  Create new array
+  Select elements
+  Transform data
+*/
