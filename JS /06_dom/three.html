@@ -15,27 +15,20 @@
     </div>
 </body>
 <script>
+    document.createElement('div')
+    console.log(div);
+    div.className = 'main'
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.setAttribute("title", "generated title")
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+    div.innerText = "Chai aur code"
+    // div.setAttribute prefer more as comapre to innerText due to the reason -- 
+    // all these div.innerText or anything what they do is that they bring first the value and then change while the setAttribute directly change 
+    document.createTextNode = document.createTextNode("Chai aur Coffee")
+    div.appendChild(addText)
 
-    const parent = document.querySelector('.parent')
-    console.log(parent);
-    console.log(parent.childern);                  // html collection
-    console.log(parent.childern[1].innerHTML);
-
-    for (let i =0; i < parent.children.length; i++) {
-        console.log(parent.children[i].innerHTML);
-    }
-
-    parent.childern[1].style.color = "orange"
-    console.log(parent.dirstElementChild);
-    console.log(parent.lastElementChild);
-
-    const dayOne = document.querySelector('.day')
-    console.log(dayOne);
-    console.log(dayOne.parentElement);
-    console.log(dayOne.nextElementSibling);
-    
-    console.log("NODES: ", parent.childNodes)
-
+    document.body.appendChild(div)
 </script>
 
 </html>
