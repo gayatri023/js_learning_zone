@@ -43,7 +43,7 @@ or
 console.dir(document)  -- Shows the JavaScript object view (properties & methods)
 
 to test - working on wikipedia page  - Brendan Eich
-document.getElementById('heading')
+document.getElementById('title')
 document.getElementById('heading').textContent = "Here is the code"
 
 
@@ -74,12 +74,18 @@ to manipulate above code file we can test them like -
     title.style.borderRadius = "5px"
 
     title
+
+                [ Difference between textContent, innerText and innerHTML
+                    title.textContent   -- shows full text including hidden
+                    title.innerText     -- shows only visible text
+                    title.innerHTML     -- shows HTML inside
+                ]
+
     title.textContent
-    title.innerHtml
-    title.innerTe
+    title.innerHTML
     title.innerText
     title.textContent
-    title.innerHTMl
+    title.innerHTML
 
     document.getElementsByClassName
     document.querySelector("h1")
@@ -87,7 +93,7 @@ to manipulate above code file we can test them like -
     document.querySelector("#title")
     document.querySelector(".heading")
     document.querySelector('input[type="password"]')  
-    document.querySelector('p.first-child') 
+    document.querySelector('p:first-child') 
     document.querySelector('ul')
     const myul = document.querySelector('ul')
     myul.querySelector('li')
@@ -105,10 +111,12 @@ to manipulate above code file we can test them like -
     tempLiList.style.color = 'green'
     tempLiList[0].style.color = 'green'
     tempLiList
-    const tempLiList = document.querySleectorAll('li')
+    const tempLiList = document.querySelectorAll('li')  - wrong - This is wrong because-- querySelectorAll returns a NodeList, not a single element.
+            correct way is we can index it or we can loop it 
+    tempLiList[0].style.color = 'green'
     const myH1 = document.querySelectorAll('h1')   --- undefined
     myH1
-    myH1[0] .style.color = 'green'
+    myH1[0].style.color = 'green'
 
 
 
