@@ -8,9 +8,25 @@ else{
     
 }
 // empty string will provide don't have user email and empty array will show got your email
-// falsy values = false, 0, -0, BigInt 0n, "", null, undefined, Nan  - eqaulising these facor to each will provide true which is common sense
+/* 
+falsy values = 
+false, 
+0, 
+-0, 
+BigInt 0n, 
+"", 
+null, 
+undefined, 
+Nan  - eqaulising these facor to each will provide true which is common sense
 
-// truthy value = "0", "false", " ", [], {}, funtion(){}
+truthy value = 
+"0", 
+"false", 
+" ", 
+[], 
+{}, 
+funtion(){}
+*/
 
 if (userEmail.length === 0 ){
     console.log("array is empty");
@@ -18,7 +34,7 @@ if (userEmail.length === 0 ){
 
 const emptyObj = {}
 
-if(Object.keys(emptyObj.length===0)){
+if(Object.keys(emptyObj.length===0)){                    //objects in JavaScript do NOT have a built-in length property. Only arrays and strings have length by default.
     console.log('object is empty'); 
 }
 
