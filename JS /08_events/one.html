@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing Image</h2>
+    <div>
+        <ul id="images">
+             <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li> 
+            <!-- onclick="alert('owl')" - do not write this in JS as it is not scalable -->
+            <!-- React is scalable so it is different -->
+            <!-- Avoid inline onclick because it mixes HTML and JavaScript, 
+            which is not scalable in large applications.
+            Instead, use addEventListener for better maintainability, 
+            multiple event handling, and event propagation.
+
+            React uses a synthetic event system and event delegation, 
+            making it more scalable and performant. -->
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+    
+</body>
+
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert('owl clicked')
+    // }         ------> this approach is good but when we apply this on onclick event - it can has some isssue
+
+    // so while adding alert we should use addEventListener as they with the onclick functionality provides propogation ability
+
+    // document.getElementById('owl').addEventListener('click', function(){
+    //     alert('owl clicked again')
+    // })
+
+    // attachEvent() -- used early time when there was too difficult to run sites into explorer
+    // jQuery() -- there was onEventListener
+
+    //type, timestamp, defaultPrevented
+    // target, toElement, secElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keycode
+    
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log(e);
+    })
+
+    
+</script>
+</html>
