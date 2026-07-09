@@ -26,7 +26,7 @@ console.log(typeof valueNumber_3);     //number
 console.log(valueNumber_3)             //1
 
 let isLoggedIn = 1
-let NooleanIsLoggedIn = boolean(isLoggedIn)
+let BooleanIsLoggedIn = boolean(isLoggedIn)
 console.log(BooleanIsLoggedIn)                     // True
 
 let isLoggedIn_1 = ""
